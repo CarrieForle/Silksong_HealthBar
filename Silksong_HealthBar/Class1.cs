@@ -302,24 +302,25 @@ namespace HealthbarPlugin
                 // 优化：减少重复的GetComponent调用和条件判断
                 if (__instance.initHp >= Plugin.BossHealthThreshold.Value)
                 {
-                    if (!Plugin.ShowBossHealthBar.Value) return;
-                    var healthBar = __instance.gameObject.GetComponent<BossHealthBar>();
-                    if (healthBar == null) 
+                    if (Plugin.ShowBossHealthBar.Value)
                     {
-                        healthBar = __instance.gameObject.AddComponent<BossHealthBar>();
-                    }
-                    
-                    if (finalDamage < 0)
-                    {
-                        healthBar.RecordMaxHealth(__instance.hp);
-                    }
-                    
-                    // 通知血条组件有伤害发生
-                    healthBar.OnDamageTaken();
+						var healthBar = __instance.gameObject.GetComponent<BossHealthBar>();
+						if (healthBar == null)
+						{
+							healthBar = __instance.gameObject.AddComponent<BossHealthBar>();
+						}
+
+						if (finalDamage < 0)
+						{
+							healthBar.RecordMaxHealth(__instance.hp);
+						}
+
+						// 通知血条组件有伤害发生
+						healthBar.OnDamageTaken();
+					}
                 }
-                else
+                else if (Plugin.ShowEnemyHealthBar.Value)
                 {
-                    if (!Plugin.ShowEnemyHealthBar.Value) return;
                     var healthBar = __instance.gameObject.GetComponent<EnemyHealthBar>();
                     if (healthBar == null) 
                     {
