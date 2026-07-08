@@ -1,5 +1,39 @@
 # ShowDamage&HealthBar MOD | 伤害显示&敌人血条模组
 
+## This is a fork!
+
+from [Silksong_HealthBar](https://github.com/jcx515250418qq/Silksong_HealthBar) 
+
+### Changes
+
+- Show damage value while hiding health bar.
+
+- Migrate from .NET framework to .NET and various changes for ease of mod development and building. See below for how to build this mod.
+
+### Install
+
+Follow the installation instructions from [the original](https://github.com/jcx515250418qq/Silksong_HealthBar).
+
+Download [the latest zip file](http://github.com/CarrieForle/Silksong_HealthBar/releases/latest/download/XiaohaiMod-ShowDamage_HealthBar.zip) from [Release](https://github.com/CarrieForle/Silksong_HealthBar/releases) and extract. Copy and replace all the files from this mod to the installed original mod.
+
+### Build
+ 
+Create `SilksongPath.props`:
+
+```xml
+<Project>
+  <PropertyGroup>
+    <SilksongFolder>SilksongInstallPath</SilksongFolder>
+    <!-- If you use a mod manager rather than manually installing BepInEx, this should be a profile directory for that mod manager. -->
+    <SilksongPluginsFolder>$(SilksongFolder)/BepInEx/plugins</SilksongPluginsFolder>
+  </PropertyGroup>
+</Project>
+```
+
+```sh
+dotnet build -c release
+```
+
 ## Video Tutorial | 视频教程 (Only Chinese)
 
 **B站视频教程**: https://www.bilibili.com/video/BV1kNaizqEFD
