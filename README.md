@@ -12,9 +12,9 @@ from [Silksong_HealthBar](https://github.com/jcx515250418qq/Silksong_HealthBar)
 
 ### Install
 
-Follow the installation instructions from [the original](https://github.com/jcx515250418qq/Silksong_HealthBar).
+Follow the installation instructions from [the original health bar mod](https://github.com/jcx515250418qq/Silksong_HealthBar).
 
-Download [the latest zip file](http://github.com/CarrieForle/Silksong_HealthBar/releases/latest/download/XiaohaiMod-ShowDamage_HealthBar.zip) from [Release](https://github.com/CarrieForle/Silksong_HealthBar/releases) and extract. Copy and replace all the files from this mod to the installed original mod.
+Download [the latest zip file](http://github.com/CarrieForle/Silksong_HealthBar/releases/latest/download/XiaohaiMod-ShowDamage_HealthBar.zip) from [Release](https://github.com/CarrieForle/Silksong_HealthBar/releases) and extract it. Copy the extracted files into the installed mod folder and replace the files.
 
 ### Build
  
